@@ -1,0 +1,35 @@
+﻿@model IEnumerable<StudentGrades.Models.Person>
+@{
+    ViewBag.Title = "Index";
+}
+<br />
+<a class="btn btn-success" href="/Home/Create">ثبت دانش آموز</a>
+<br />
+<br />
+<table class="table table-bordered">
+
+    <tr>
+        <th>Id</th>
+        <th>FirstName</th>
+        <th>LastName</th>
+        <th>NationalCode</th>
+        <th>Command</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.FirstName</td>
+            <td>@item.LastName</td>
+            <td>@item.NationalCode</td>
+            <td>
+                <a class="btn btn-info btn-sm" href="/Home/Detail/@item.Id">Detail</a>
+                <a class="btn btn-warning btn-sm" href="/Home/Edit/@item.Id">Edit</a>
+                <a class="btn btn-danger btn-sm" href="/Home/Delete/@item.Id">Delete</a>
+            </td>
+            
+        </tr>
+    }
+
+</table>

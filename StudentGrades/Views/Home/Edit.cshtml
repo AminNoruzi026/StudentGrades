@@ -1,0 +1,51 @@
+﻿
+@model StudentGrades.Models.Person
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Create New Person</h2>
+<hr />
+<form action="/Home/Edit" method="POST">
+    <input  type="hidden" name="Id" value="@Model.Id"/>
+    <dl class="dl-horizontal">
+        <dt>
+            FirstName :
+        </dt>
+        <dd>
+            <input type="text" class="form-control" name="FirstName" value="@Model.FirstName" />
+        </dd>
+
+        <br />
+
+        <dt>
+            LastName :
+        </dt>
+        <dd>
+            <input type="text" class="form-control" name="LastName" value="@Model.LastName"/>
+        </dd>
+
+        <br />
+
+        <dt>
+            NationalCode :
+        </dt>
+        <dd>
+            <input type="number" class="form-control" name="NationalCode" value="@Model.NationalCode" />
+        </dd>
+
+        <br />
+
+        <dt>
+
+        </dt>
+        <dd>
+            <input type="submit" class="btn btn-warning" value="Edit" />
+        </dd>
+    </dl>
+</form>
+
+
+
+
